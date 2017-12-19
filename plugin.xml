@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="gps-permissions-android" version="1.0.0">
+
+    <name>GPS Permissions</name>
+    <description>Set permissions for android geolocation.</description>
+    <author>Adrián Vázquez Navarrete</author>
+    <license>MIT</license>
+    <keywords>ecosystem:gps,location</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <repo>https://github.com/adrianvana/GPSpermissions.git</repo>
+    <issue>https://github.com/adrianvana/GPSpermissions/issues</issue>
+
+    <platform name="android">
+
+    	<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-feature android:name="android.hardware.location.gps" />
+        </config-file>
+
+    </platform>
+</plugin>
